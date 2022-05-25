@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="{% static 'web/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'web/css/custom.css' %}">
+        <title>rubytox</title>
+    </head>
+    <body>
+        <!--
+        <div class="row text-light text-center bg-darker">
+            <h1>Botnet</h1>
+        </div>-->
+        <script src="{% static 'web/js/jquery.min.js' %}"></script>
+        <script src="{% static 'web/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'web/js/bootbox.min.js' %}"></script>
+        <main>
+        {% include 'web/nav.html' %}
+        <div class="row screen">
+            <div class="col-12">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+        </main>
+
+    </body>
+</html>
